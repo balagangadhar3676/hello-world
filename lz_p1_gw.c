@@ -792,8 +792,6 @@ int align_with_servertime(void)
         /* specify URL to get */
         curl_easy_setopt(curl_handle, CURLOPT_URL, __time_url);
 
-        curl_easy_setopt(curl_handle,CURLOPT_SSL_VERIFYPEER,0L);
-
         /* send all data to this function  */
         curl_easy_setopt(curl_handle, CURLOPT_WRITEFUNCTION, server_response_callback);
 
@@ -1740,8 +1738,6 @@ char *hit_endpoint_url(char *data, const char *url)
         info_log(UART_TAG, "[hit_endpoint_url] ssl seesion id used: %p\n", __ssl_session_id);
 
         curl_easy_setopt(curl_handle, CURLOPT_URL, ptr);
-
-        curl_easy_setopt(curl_handle,CURLOPT_SSL_VERIFYPEER,0L);
 
         curl_easy_setopt(curl_handle, CURLOPT_FOLLOWLOCATION, 1L);
 
