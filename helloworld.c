@@ -1,6 +1,6 @@
 #include <stdio.h>
 main()
 {
-    printf("Hello Balagangadhar\n");
+    printf("Hello Gateway team\n");
     return 0;
 }
